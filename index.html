@@ -1,274 +1,417 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Chung Hwan Kim">
-<title>Chung Hwan Kim</title>
-
-<style>
-span.pub-header {
-display: block;
-font-size: 1.05em;
-margin-top: 1.8em;
-margin-bottom: 0em;
-margin-left: 1em;
-margin-right: 1em;
-}
-
-div.news {
-margin-left: 1em;
-margin-right: 1em;
-}
-
-a.camouflage:link, a.camouflage:visited, a.camouflage:hover, a.camouflage:active {
-cursor: no-drop;
-text-decoration: none;
-}
-
-img.profile {
-padding: 1px;
-border: 1px solid #021a40;
-}
-</style>
-
-<!-- Bootstrap -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<title>Kangkook Jee</title>
+<meta name="description" content="Kangkook Jee's Home Page">
+<link href="./style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="./jquery_smint.js"></script>
 
 <script type="text/javascript">
-$(function() {
-fill_email();
-show_pubs("selected")
-create_pubs();
+$(document).ready( function() {
+    $('#header').smint({
+    	'scrollSpeed': 192
+    });
 });
-
-function fill_email() {
-var email = ("!@#chun" +"!@#gkim"+"@!@#"+"ne!@#"+"c-la!@#b"+"s.com").replace(/!@#/g,"");
-var forms = document.getElementsByClassName("email");
-for (var i = 0; i < forms.length; i++) {
-forms[i].href = "mailto:" + email;
-forms[i].textContent = email;
-}
-}
-
-function switch_pub_link(x) {
-var forms = document.getElementsByClassName("pub-link");
-for (var i = 0; i < forms.length; i++) {
-if (forms[i].id.substring(4) == x) {
-forms[i].style.textDecoration = "underline";
-} else {
-forms[i].style.textDecoration = "none";
-}
-}
-}
-
-function show_pubs(x) {
-$(".pub").hide();
-$(".pub-selected").hide();
-var y = ".pub"
-if (x == "full") {
-} else if (x == "selected") {
-y += "-" + x;
-} else {
-return
-}
-$(y).show();
-switch_pub_link(x)
-}
-
-function create_pubs() {
-$(".pub-link").click(function() {
-var x = this.id.substring(4);
-show_pubs(x)
-});
-}
 </script>
 
 <script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-26038302-2', 'auto');
-ga('send', 'pageview');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3343808-2', 'auto');
+  ga('send', 'pageview');
+  ga('set', 'anonymizeIp', true);
+</script>
+
+<script type="text/javascript">
+  $(function() {
+  fill_email();
+  // show_pubs("selected")
+  // create_pubs();
+  });
+  
+  function fill_email() {
+  var email = ("!@#kj" +"!@#ee"+"@!@#"+"ne!@#"+"c-la!@#b"+"s.com").replace(/!@#/g,"");
+  var forms = document.getElementsByClassName("email");
+  for (var i = 0; i < forms.length; i++) {
+  forms[i].href = "mailto:" + email;
+  forms[i].textContent = email;
+  }
+  }
+  fill_email()
 </script>
 </head>
-<body>
 
-<div id="wrap">
-<div class="container">
-<div class="page-header">
-<div class="row">
-<div class="col-md-6">
-<h1>Chung Hwan Kim (김충환), Ph.D.</h1>
-<strong class="text-info">Researcher</strong><br>
-<a href="http://www.nec-labs.com/">NEC Labs America</a><br>
-<small>4 Independence Way, Suite 200, Princeton, New Jersey 08540, USA</small><br>
-<p>[ <a class="email">email</a> ] [ <a href="doc/ChungHwanKim-CV.pdf">CV</a> ]<!-- <span class="text-muted">(updated in Feb. 2016)</span>--> [ <a href="https://scholar.google.com/citations?user=zyTOpUQAAAAJ">Google Scholar</a> ] [ <a href="https://github.com/chungkim/">GitHub</a> ]<!-- [ <a href="https://www.linkedin.com/in/chunghwankim">LinkedIn</a> ]--> [ <a href="https://www.dropbox.com/s/sdv2ixu8oavnhjj/id_rsa.pub?dl=1">public key</a> ]<!-- [ <a href="https://www.purdue.edu/registrar/documents/calendars/academicCalendars/academicCal_16-17.pdf">Purdue Calendar</a> ]--></p>
+<body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
+<div id="container">
+
+  <!-- Menu -->
+
+  <div id="header" >
+    <div id="topbar"></div>
+    <div itemscope itemtype="http://schema.org/Person">
+      <p id="title"><span itemprop="name">Kangkook Jee</span></p>
+    </div>
+    <ul id="nav">
+      <li><a href="#" id="sAbout">About</a></li>
+      <li><a href="#" id="sPublications">Publications</a></li>
+      <li><a href="mikepo_cv.pdf">Resume</a></li>
+    </ul>
+    <hr class="thin">
+  </div> <!-- header -->
+  
+  <!-- About -->
+	
+  <div class="section sAbout">
+	<div class="inner">
+		
+<div itemscope itemtype="http://schema.org/Person">
+  <div id="fixedimg">
+    <img src="kjee.jpg" style="width:150px;">
+  </div>
+
+  <p>
+    <span itemprop="jobTitle">Kangkook Jee</span><br />
+    <a class="email">email</a></p><br/>
+    <a href="http://www.nec-labs.com/research-departments/computer-security/computer-security-home">Computer Security Department</a><br />
+    <a href="http://www.nec-labs.com/" itemprop="affiliation">NEC Laboratories America</a>
+  </p>
+</div> <!--itemscope-->
+  <p>
+    <script type="text/javascript">fill_email()</script>
+    4 Independence Way, Suite 200<br />
+    Princeton, NJ 08540 
+  </p>
+
+<h1>About</h1>
+<hr class="thin">
+
+<p>
+  I am a researcher in the Computer Security Department at NEC Labs America in
+  Princeton, NJ. I received my Ph.D. in Computer Science from Columbia
+  University. My advisors were Prof. Angelos D. Keromytis. Prior to my graduate
+  study, I spent five years from industry working as a system engineer at IBM
+  Korea.
+</p>
+<p>
+
+<h1>Research Interest</h1>
+<hr class="thin">
+  <!--
+<a href="https://twitter.com/polychronakis">@polychronakis</a> |
+<a href="http://scholar.google.com/citations?user=JBPcwIEAAAAJ&hl=en">Google Scholar</a>
+  -->
+</p>
 </div>
-<div class="col-md-6">
-<span class="pull-right"><img class="profile" src="images/profile.png" alt="Chung Hwan Kim" /></span>
-</div>
-</div>
-</div>
-
-<h4> <b>About Me</b> </h4>
-I am a researcher in the <a href="http://www.nec-labs.com/research-departments/computer-security/computer-security-home">Computer Security Department</a> at <a href="http://www.nec-labs.com/">NEC Labs America</a> in Princeton, NJ. I received my Ph.D. in Computer Science at <a href="https://www.purdue.edu/">Purdue University</a>. My advisors were <a href="https://www.cs.purdue.edu/homes/dxu/">Prof. Dongyan Xu</a> and <a href="https://www.cs.purdue.edu/homes/xyzhang/">Prof. Xiangyu Zhang</a>. I received my Master's degree in Computer Science from the <a href="http://www.utah.edu/">University of Utah</a>, where I was working in the <a href="https://www.flux.utah.edu/">Flux Research Group</a>. <a href="https://www.cs.utah.edu/~regehr/">Prof. John Regehr</a> and <a href="https://www.cs.utah.edu/~eeide/">Prof. Eric Eide</a> co-advised my Master's research. I did my undergraduate study in Computer Science at <a href="http://tulip.sunmoon.ac.kr/english/main.do"><nowrap>Sunmoon University</nowrap></a> in Korea. <a class="camouflage" href="https://www.google.com/analytics/web/?hl=en&pli=1#report/visitors-overview/a26038302w62050377p63593151/">&nbsp;&nbsp;&nbsp;</a><br>
-
-<br>
-<div class="panel panel-default">
-<div class="panel-body"v>
-<div class="news"><li>I am a TPC member of <b><a href="https://www.ndss-symposium.org/ndss2019/">NDSS 2019</a></b>. Please consider submitting your best work (<a href="http://www.ndss-symposium.org/ndss2019/ndss-2019-call-for-papers/">CFP</a>).</li></div>
-</div>
-</div>
-
-<!--<br>-->
-<h4> <b>Research Interests</b> </h4>
-Systems Security; Operating Systems; Program Analysis; Binary Analysis and Instrumentation.
-<br>
-
-<br>
-<h4><b>Publications</b> [ <a class="pub-link" id="pub-selected">selected</a> / <a class="pub-link" id="pub-full">full</a> ]</h4>
-<div class="panel panel-default">
-<div class="panel-body">
-<span class="pub pub-header" style="margin-top: .5em">Conference Publications:</span>
-<ol>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>SAQL: A Stream-based Query System for Real-Time Abnormal System Behavior Detection</strong>. [ <a href="doc/sec18-saql.pdf">paper</a> ] [ <a href ="https://sites.google.com/site/saqlsystem/">website</a> ]<br>
-Peng Gao, Xusheng Xiao, Ding Li, Zhichun Li, Kangkook Jee, Zhenyu Wu, <b>Chung Hwan Kim</b>, Sanjeev R. Kulkarni, Prateek Mittal.<br>
-In <em>Proceedings of the 27th USENIX Security Symposium (<a href="https://www.usenix.org/conference/usenixsecurity18">Security 2018</a>)</em>, <br>
-Baltimore, MD, USA, August 2018.
-</li></p></div>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>Securing Real-Time Microcontroller Systems through Customized Memory View Switching</strong>. [ <a href="doc/ndss18-minion.pdf">paper</a> ] [ <a href ="doc/ndss18-minion-slides.pdf">slides</a> ] [ <a href="https://www.youtube.com/watch?v=G5iKbI9k1A4">video</a> ]<!-- [ <a href ="https://github.com/chungkim/minion">code</a> ]--><br>
-<b>Chung Hwan Kim</b>, Taegyu Kim, Hongjun Choi, Zhongshu Gu, Byoungyoung Lee, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 25th Network and Distributed System Security Symposium (<a href="https://www.ndss-symposium.org/ndss2018/">NDSS 2018</a>)</em>, <br>
-San Diego, CA, USA, February 2018.
-</li></p></div>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>RevARM: A Platform-Agnostic ARM Binary Rewriter for Security Applications</strong>. [ <a href="doc/acsac17-revarm.pdf">paper</a> ] [ <a href ="doc/acsac17-revarm-slides.pdf">slides</a> ]<br>
-Taegyu Kim, <b>Chung Hwan Kim</b>, Hongjun Choi, Yonghwi Kwon, Brendan Saltaformaggio, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 33rd Annual Computer Security Applications Conference (<a href="https://www.acsac.org/2017/">ACSAC 2017</a>)</em>, <br>
-Orlando, FL, USA, December 2017.
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>J-Force: Forced Execution on JavaScript</strong>. [ <a href="doc/www17-jforce.pdf">paper</a> ] [ <a href ="doc/www17-jforce-slides.pdf">slides</a> ]<br>
-Kyungtae Kim, I Luk Kim, <b>Chung Hwan Kim</b>, Yonghwi Kwon, Yunhui Zheng, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 26th International World Wide Web Conference (<a href="http://www.www2017.com.au/">WWW 2017</a>)</em>, <br>
-Perth, WA, Australia, April 2017.
-</li></p></div>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>PerfGuard: Binary-Centric Application Performance Monitoring in Production Environments</strong>. [ <a href="doc/fse16-perfguard.pdf">paper</a> ] [ <a href="doc/fse16-perfguard-slides.pdf">slides</a> ]<br>
-<b>Chung Hwan Kim</b>, Junghwan Rhee, Kyu Hyung Lee, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 24th ACM SIGSOFT International Symposium on the Foundations of Software Engineering (<a href="https://www.cs.ucdavis.edu/fse2016/">FSE 2016</a>)</em>, <br>
-Seattle, WA, USA, November 2016.
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>Accurate, Low Cost and Instrumentation-Free Security Audit Logging for Windows</strong>. [ <a href="doc/acsac15-introsec.pdf">paper</a> ] [ <a href="doc/acsac15-introsec-slides.pdf">slides</a> ]<br>
-Shiqing Ma, Kyu Hyung Lee, <b>Chung Hwan Kim</b>, Junghwan Rhee, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 31st Annual Computer Security Applications Conference (<a href="https://www.acsac.org/2015/">ACSAC 2015</a>)</em>, <br>
-Los Angeles, CA, USA, December 2015.
-</li></p></div>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>CAFE: A Virtualization-Based Approach to Protecting Sensitive Cloud Application Logic Confidentiality</strong>. [ <a href="doc/asiaccs15-cafe.pdf">paper</a> ] <div class="pub-selected" style="display: inline-block">[ <a href="doc/tdsc18-cafe.pdf">journal</a> ]</div> [ <a href="doc/asiaccs15-cafe-slides.pdf">slides</a> ]<br>
-<b>Chung Hwan Kim</b>, Sungjin Park, Junghwan Rhee, Jongjin Won, Taisook Han, Dongyan Xu.<br>
-In <em>Proceedings of the 10th ACM Symposium on Information, Computer and Communications Security (<a href="http://icsd.i2r.a-star.edu.sg/asiaccs15/">ASIACCS 2015</a>)</em>, <br>
-Singapore, April 2015.
-</li></p></div>
-
-<div class="pub pub-selected" style="display: none"><p><li><strong>IntroPerf: Transparent Context-Sensitive Multi-Layer Performance Inference using System Stack Traces</strong>. [ <a href="doc/sigmet14-introperf.pdf">paper</a> ] [ <a href="doc/sigmet14-introperf-slides.pdf">slides</a> ]<span class="pub-selected" style="display: none"> [ <a href="doc/sigmet14-introperf-poster.pdf">poster</a> ]</span><br>
-<b>Chung Hwan Kim</b>, Junghwan Rhee, Hui Zhang, Nipun Arora, Guofei Jiang, Xiangyu Zhang, Dongyan Xu.<br>
-In <em>Proceedings of the 2014 ACM International Conference on Measurement and Modeling of Computer Systems (<a href="http://www.sigmetrics.org/sigmetrics2014/">SIGMETRICS 2014</a>)</em>, <br>
-Austin, TX, USA, June 2014.
-</li></p></div>
-
-</ol>
-
-<span class="pub pub-header">Journal Publications:</span>
-<ol>
-
-<div class="pub" style="display: none"><p><li><strong>CAFE: A Virtualization-Based Approach to Protecting Sensitive Cloud Application Logic Confidentiality</strong>. [ <a href="doc/tdsc18-cafe.pdf">paper</a> ]<br>
-Sungjin Park, <b>Chung Hwan Kim</b>, Junghwan Rhee, Jongjin Won, Taisook Han, Dongyan Xu.<br>
-<em>IEEE Transactions on Dependable and Secure Computing (TDSC)</em>, X(X), 2018.
-</li></p></div>
-
-</ol>
-<span class="pub pub-header">Patents:</span>
-<ol>
-
-<div class="pub" style="display: none"><p><li><strong>Transparent Performance Inference of Whole Software Layers and Context-Sensitive Performance Debugging</strong>. [ <a href="https://www.google.com/patents/US9367428">details</a> ]<br>
-Junghwan Rhee, Hui Zhang, Nipun Arora, Guofei Jiang, <b>Chung Hwan Kim</b>.<br>
-<em>US 9367428 B2</em>, June 2016 (granted).
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>Apparatus and Method For Software Security: A Secure, Platform-Independent Process Execution Model</strong>. [ <a href="http://link.kipris.or.kr/link/main/sharePage_EN.jsp?reg_key=gaXejDaQeuOtyJld32oYgA==&APPLNO=1020090056092">details</a> ] [ <a href="https://github.com/chungkim/peshield">code</a> ]<br>
-<b>Chung Hwan Kim</b>, Jeong Bae Lee, Yoon Young Park.<br>
-<em>KR 1020090056092</em>, December 2011 (granted).
-</li></p></div>
-
-</ol>
-
-<span class="pub pub-header">Posters:</span>
-<ol>
-
-<div class="pub" style="display: none"><p><li><strong>IntroPerf: Transparent Context-Sensitive Multi-Layer Performance Inference using System Stack Traces</strong>. [ <a href="doc/sigmet14-introperf-poster.pdf">poster</a> ]<br>
-<b>Chung Hwan Kim</b>, Junghwan Rhee, Hui Zhang, Nipun Arora, Guofei Jiang, Xiangyu Zhang, Dongyan Xu.<br>
-<em>2014 ACM International Conference on Measurement and Modeling of Computer Systems (<a href="http://www.sigmetrics.org/sigmetrics2014/">SIGMETRICS 2014</a>)</em>, <br>
-Austin, TX, USA, June 2014.
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>KMAG: VMM-level Malware Detection via Kernel Data Access Profiling</strong>. [ <a href="doc/cerias13-kmag-poster.pdf">poster</a> ]<br>
-<b>Chung Hwan Kim</b>, Dannie Stanley, Rick Porter, Dongyan Xu.<br>
-<em>14th Annual CERIAS Information Security Symposium (<a href="https://www.cerias.purdue.edu/site/symposium2013/">CERIAS 2013</a>)</em>, <br>
-West Lafayette, IN, USA, April 2013.
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>Accelerating Dynamic Binary Translation with GPUs</strong>. [ <a href="doc/soc11-gpu-poster.pdf">poster</a> ] [ <a href="doc/soc11-gpu.pdf">paper</a> ] [ <a href="https://github.com/chungkim/dbtgpu">code</a> ]<br>
-<b>Chung Hwan Kim</b>, Srikanth Manikarnike, Vaibhav Sharma, Eric Eide, Robert Ricci.<br>
-<em>University of Utah School of Computing Research Day 2011</em>,<br>
-Salt Lake City, UT, USA, March 2011.
-</li></p></div>
-
-</ol>
-
-<span class="pub pub-header">Technical Reports:</span>
-<ol>
-
-<div class="pub" style="display: none"><p><li><strong>XenTT: Deterministic Systems Analysis in Xen</strong>. [ <a href="https://www.slideshare.net/xen_com_mgr/xentt-deterministic-systems-analysis-in-xen">slides</a> ] [ <a href="https://www.cs.utah.edu/~aburtsev/xen-tt-doc/">code</a> ]<br>
-Anton Burtsev, David Johnson, <b>Chung Hwan Kim</b>, Mike Hibler, Eric Eide, John Regehr.<br>
-<em>XenSummit North America 2012</em>,<br>
-San Diego, CA, USA, August 2012.
-</li></p></div>
-
-<div class="pub" style="display: none"><p><li><strong>Iterative Backtracking via Deterministic Virtual Machine Replay and Virtual Machine Introspection</strong>. [ <a href="doc/utah12-ms-kim.pdf">paper</a> ] [ <a href="https://gitlab.flux.utah.edu/a3/vmi">code</a> ]<br>
-<b>Chung Hwan Kim</b>.<br>
-<em>Master's Project Report</em>,<br>
-Salt Lake City, UT, USA, August 2012.
-</li></p></div>
-
-</ol>
-</div>
-</div>
-</div>
+<br class="clear">
 </div>
 
+
+
+  <!-- Publications -->
+
+	<div class="section sPublications">
+	<div class="inner">
+
+<h1>Conference Publications</h1>
+<hr class="thin">
+
+<p>
+<a href="papers/ccr.sp18.pdf">
+Compiler-assisted Code Randomization</a><br />
+Hyungjoon Koo, Yaohui Chen, Long Lu, Vasileios P. Kemerlis and Michalis Polychronakis.
+In Proceedings of the 39th IEEE Symposium on Security &amp; Privacy (S&amp;P).
+May 2018, San Francisco, CA.
+</p>
+
+<p>
+<a href="papers/asyncweb.eurosp18.pdf">
+Security Risks in Asynchronous Web Servers: When Performance Optimizations Amplify the Impact of Data-oriented Attacks</a><br />
+Micah Morton, Jan Werner, Panagiotis Kintis, Kevin Z. Snow, Manos Antonakakis, Michalis Polychronakis, and Fabian Monrose.
+In Proceedings of the 3rd IEEE European Symposium on Security &amp; Privacy (EuroS&amp;P).
+April 2018, London, UK.
+</p>
+
+<p>
+<a href="papers/proxyscan.ndss18.pdf">
+A Large-scale Analysis of Content Modification by Open HTTP Proxies</a><br />
+Georgios Tsirantonakis, Panagiotis Ilia, Sotiris Ioannidis, Elias Athanasopoulos, and Michalis Polychronakis.
+In Proceedings of the Network and Distributed System Security Symposium (NDSS).
+February 2018, San Diego, CA.
+</p>
+
+<p>
+<a href="papers/shadowcode.acsac17.pdf">
+Protecting COTS Binaries from Disclosure-guided Code Reuse Attacks</a><br />
+Mingwei Zhang, Michalis Polychronakis, and R. Sekar.
+In Proceedings of the 33rd Annual Computer Security Applications Conference (ACSAC), pp. 128&ndash;140.
+December 2017, Orlando, FL.
+</p>
+
+<p>
+<a href="papers/rerand.essos17.pdf">
+Defeating Zombie Gadgets by Re-randomizing Code Upon Disclosure</a><br />
+Micah Morton, Hyungjoon Koo, Forrest Li, Kevin Z. Snow, Michalis Polychronakis, and Fabian Monrose.
+In Proceedings of the 9th International Symposium on Engineering Secure Software and Systems (ESSoS), pp. 143&ndash;160.
+July 2017, Bonn, Germany.
+</p>
+
+<p>
+<a href="papers/wearntear.sp17.pdf">
+Spotless Sandboxes: Evading Malware Analysis Systems using Wear-and-Tear Artifacts</a><br />
+Najmeh Miramirkhani, Mahathi Priya Appini, Nick Nikiforakis and Michalis Polychronakis.
+In Proceedings of the 38th IEEE Symposium on Security &amp; Privacy (S&amp;P), pp. 1009&ndash;1024.
+May 2017, San Jose, CA.
+</p>
+
+<p>
+<a href="papers/krx.eurosys17.pdf">
+kR^X: Comprehensive Kernel Protection against Just-In-Time Code Reuse</a><br />
+Marios Pomonis, Theofilos Petsios, Angelos D. Keromytis, Michalis Polychronakis, and Vasileios P. Kemerlis.
+In Proceedings of the 12th European Conference on Computer Systems (EuroSys), pp. 420&ndash;436.
+April 2017, Belgrade, Serbia.
+</p>
+
+<p>
+<a href="papers/xfu.eurosp17.pdf">
+Revisiting Browser Security in the Modern Era: New Data-only Attacks and Defenses</a><br />
+Roman Rogowski, Micah Morton, Forrest Li, Kevin Z. Snow, Fabian Monrose, and Michalis Polychronakis.
+In Proceedings of the 2nd IEEE European Symposium on Security &amp; Privacy (EuroS&amp;P).
+April 2017, Paris, France.
+</p>
+
+<p>
+<a href="papers/heisenbite.sp16.pdf">
+Return to the Zombie Gadgets: Undermining Destructive Code Reads via Code Inference Attacks</a><br />
+Kevin Z. Snow, Roman Rogowski, Jan Werner, Hyungjoon Koo, Fabian Monrose, and Michalis Polychronakis.
+In Proceedings of the 37th IEEE Symposium on Security &amp; Privacy (S&amp;P), pp. 954&ndash;968.
+May 2016, San Jose, CA.
+</p>
+
+<p>
+<a href="papers/displacement.asiaccs16.pdf">
+Juggling the Gadgets: Binary-level Code Randomization using Instruction Displacement</a><br />
+Hyungjoon Koo and Michalis Polychronakis.
+In Proceedings of the 11th ACM Asia Conference on Computer and Communications Security (ASIACCS), pp. 23&ndash;34.
+May 2016, Xi'an, China.
+</p>
+
+<p>
+<a href="papers/near.asiaccs16.pdf">
+No-Execute-After-Read: Preventing Code Disclosure in Commodity Software</a><br />
+Jan Werner, George Baltas, Rob Dallara, Nathan Otternes, Kevin Snow, Fabian Monrose, and Michalis Polychronakis.
+In Proceedings of the 11th ACM Asia Conference on Computer and Communications Security (ASIACCS), pp. 35&ndash;46.
+May 2016, Xi'an, China.
+</p>
+
+<p>
+<a href="papers/racerand.hpsc16.pdf">
+Using Diversity to Harden Multithreaded Programs Against Exploitation</a><br />
+David M. Tagatac, Salvatore J. Stolfo, and Michalis Polychronakis.
+In Proceedings of the 2nd IEEE International Conference on High Performance and Smart Computing (HPSC).
+April 2016, New York, NY.
+</p>
+
+<p>
+<a href="papers/dynaguard.acsac15.pdf">
+DynaGuard: Armoring Canary-based Protections against Brute-force Attacks</a><br />
+Theofilos Petsios, Vasileios P. Kemerlis, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 31st Annual Computer Security Applications Conference (ACSAC), pp. 351&ndash;360.
+December 2015, Los Angeles, CA.
+</p>
+
+<p>
+<a href="papers/gpudisasm.isc15.pdf">
+GPU-Disasm: A GPU-based x86 Disassembler</a><br />
+Evangelos Ladakis, Giorgos Vasiliadis, Michalis Polychronakis, Sotiris Ioannidis, and Georgios Portokalidis.
+In Proceedings of the 18th Information Security Conference (ISC), pp. 472&ndash;489.
+September 2015, Trondheim, Norway.
+</p>
+
+<p>
+<a href="papers/devil.ndss15.pdf">
+The Devil is in the Constants: Bypassing Defenses in Browser JIT Engines</a><br />
+Michalis Athanasakis, Elias Athanasopoulos, Michalis Polychronakis, Georgios Portokalidis, and Sotiris Ioannidis.
+In Proceedings of the Network and Distributed System Security Symposium (NDSS).
+February 2015, San Diego, CA.
+</p>
+
+<p>
+<a href="papers/intflow.acsac14.pdf">
+IntFlow: Improving the Accuracy of Arithmetic Error Detection Using Information Flow Tracking</a><br />
+Kangkook Jee, Theofilos Petsios, Marios Pomonis, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 30th Annual Computer Security Applications Conference (ACSAC), pp. 416&ndash;425.
+December 2014, New Orleans, LA.
+</p>
+
+<p>
+<a href="papers/pixelvault.ccs14.pdf">
+PixelVault: Using GPUs for securing cryptographic operations</a><br />
+Giorgos Vasiliadis, Elias Athanasopoulos, Michalis Polychronakis, and Sotiris Ioannidis.
+In Proceedings of the 21st ACM Conference on Computer and Communications Security (CCS), pp. 1131&ndash;1142.
+November 2014, Scottsdale, AZ.
+</p>
+
+<p>
+<a href="papers/reloc.raid14.pdf">
+Dynamic Reconstruction of Relocation Information for Stripped Binaries</a><br />
+Vasilis Pappas, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 17th International Symposium on Research in Attacks, Intrusions and Defenses (RAID), pp. 68&ndash;87.
+September 2014, Gothenburg, Sweden.
+</p>
+
+<p>
+<a href="papers/ret2dir.sec14.pdf">
+ret2dir: Rethinking Kernel Isolation</a><br />
+Vasileios P. Kemerlis, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 23rd USENIX Security Symposium, pp. 957&ndash;972.
+August 2014, San Diego, CA.
+</p>
+
+<p>
+<a href="papers/chainlength.sec14.pdf">
+Size Does Matter - Why Using Gadget-Chain Length to Prevent Code-reuse Attacks is Hard</a><br />
+Enes Göktaş, Elias Athanasopoulos, Herbert Bos, Michalis Polychronakis, and Georgios Portokalidis.
+In Proceedings of the 23rd USENIX Security Symposium, pp. 417&ndash;432.
+August 2014, San Diego, CA.
+</p>
+
+<p>
+<a href="papers/gaspp.atc14.pdf">
+GASPP: A GPU-Accelerated Stateful Packet Processing Framework</a><br />
+Giorgos Vasiliadis, Lazaros Koromilas, Michalis Polychronakis, and Sotiris Ioannidis.
+In Proceedings of the USENIX Annual Technical Conference (ATC), pp. 321&ndash;332.
+June 2014, Philadelphia, PA.
+</p>
+
+<p>
+<a href="papers/tor-netflow.pam14.pdf">
+On the Effectiveness of Traffic Analysis Against Anonymity Networks Using Flow Records</a><br />
+Sambuddho Chakravarty, Marco V. Barbera, Georgios Portokalidis, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 15th Passive and Active Measurement Conference (PAM), pp. 247&ndash;257.
+March 2014, Los Angeles, CA.
+</p>
+
+<p>
+<a href="papers/k-subscription.acsac13.pdf">
+K-Subscription: Privacy-preserving Microblogging Browsing through Obfuscation</a><br />
+Panagiotis Papadopoulos, Antonis Papadogiannakis, Michalis Polychronakis, Apostolis Zarras, Thorsten Holz, and Evangelos P. Markatos.
+In Proceedings of the 29th Annual Computer Security Applications Conference (ACSAC), pp. 49&ndash;58.
+December 2013, New Orleans, LA.
+</p>
+
+<p>
+<a href="papers/pride.icics13.pdf">
+PRIDE: Practical Intrusion Detection in Resource Constrained Wireless Mesh Networks</a><br />
+Amin Hassanzadeh, Zhaoyan Xu, Radu Stoleru, Guofei Gu, and Michalis Polychronakis.
+In Proceedings of the 15th International Conference on Information &amp; Communications Security (ICICS), pp. 213&ndash;228.
+November 2013, Beijing, China.
+</p>
+
+<p>
+<a href="papers/scap.imc13.pdf">
+Scap: Stream-Oriented Network Traffic Capture and Analysis for High-Speed Networks</a><br />
+Antonis Papadogiannakis, Michalis Polychronakis, and Evangelos P. Markatos.
+In Proceedings of the Internet Measurement Conference (IMC), pp. 441&ndash;454.
+October 2013, Barcelona, Spain.
+</p>
+
+<p>
+<a href="papers/appstores.imc13.pdf">
+Rise of the Planet of the Apps: A Systematic Study of the Mobile App Ecosystem</a><br />
+Thanasis Petsas, Antonis Papadogiannakis, Michalis Polychronakis, Evangelos P.  Markatos, and Thomas Karagiannis.
+In Proceedings of the Internet Measurement Conference (IMC), pp. 227&ndash;290.
+October 2013, Barcelona, Spain.
+</p>
+
+<p>
+<a href="papers/sgnet.raid13.pdf">
+Server-side Code Injection Attacks: A Historical Perspective</a><br />
+Jakob Fritz, Corrado Leita, and Michalis Polychronakis.
+In Proceedings of the 16th International Symposium on Research in Attacks, Intrusions and Defenses (RAID), pp. 41&ndash;61.
+October 2013, Saint Lucia.
+</p>
+
+<p>
+<a href="papers/cloudfence.raid13.pdf">
+CloudFence: Data Flow Tracking as a Cloud Service</a><br />
+Vasilis Pappas, Vasileios P. Kemerlis, Angeliki Zavou, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 16th International Symposium on Research in Attacks, Intrusions and Defenses (RAID), pp. 411&ndash;431.
+October 2013, Saint Lucia.
+</p>
+
+<p>
+<a href="papers/kbouncer.sec13.pdf">
+Transparent ROP Exploit Mitigation using Indirect Branch Tracing</a><br />
+Vasilis Pappas, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 22nd USENIX Security Symposium, pp. 447&ndash;462.
+August 2013, Washington, DC. 
+</p>
+
+<p>
+<a href="papers/cloudopsy.hci13.pdf">
+Cloudopsy: an Autopsy of Data Flows in the Cloud</a><br />
+Angeliki Zavou, Vasilis Pappas, Vasileios P. Kemerlis, Michalis Polychronakis, Georgios Portokalidis, and Angelos D. Keromytis.
+In Proceedings of the 15th International Conference on Human-Computer Interaction (HCI), pp. 366&ndash;375.
+July 2013, Las Vegas, NV.
+</p>
+
+<p>
+<a href="papers/safebutton.sec12.pdf">
+Privacy-Preserving Social Plugins</a><br />
+Georgios Kontaxis, Michalis Polychronakis, Angelos D. Keromytis and Evangelos P.  Markatos.
+In Proceedings of the 21st USENIX Security Symposium, pp. 631&ndash;646.
+August 2012, Bellevue, WA.
+</p>
+
+<p>
+<a href="papers/arc.acns12.pdf">
+ARC: Protecting against HTTP Parameter Pollution Attacks Using Application
+Request Caches</a><br />
+Elias Athanasopoulos, Vasileios P. Kemerlis, Michalis Polychronakis, and Evangelos P. Markatos.
+In Proceedings of the 10th International Conference on Applied Cryptography and Network Security (ACNS), pp. 400&ndash;417.
+June 2012, Singapore.
+</p>
+
+<p>
+<a href="papers/spp.atc12.pdf">
+Tolerating Overload Attacks Against Packet Capturing Systems (Short Paper)</a><br />
+Antonis Papadogiannakis, Michalis Polychronakis, and Evangelos P. Markatos.
+In Proceedings of the USENIX Annual Technical Conference (ATC), pp. 197&ndash;202.
+June 2012, Boston, MA.
+</p>
+
+<p>
+<a href="papers/smashing.sp12.pdf">
+Smashing the Gadgets: Hindering Return-Oriented Programming Using In-Place Code Randomization</a><br />
+Vasilis Pappas, Michalis Polychronakis, and Angelos D. Keromytis.
+In Proceedings of the 33rd IEEE Symposium on Security &amp; Privacy (S&amp;P), pp. 601&ndash;615.
+May 2012, San Francisco, CA.
+</p>
+
+
+<h1>PhD Thesis</h1>
+<hr class="thin">
+
+<p>
+<a href="papers/mikepo_thesis.pdf">
+Generic Detection of Code Injection Attacks using Network-level Emulation</a><br />
+Computer Science Department, University of Crete. October 2009.
+</p>
+
+<div id="bottombar"></div>
+
+	</div>
+	</div>
+
+</div> <!-- container -->
 </body>
 </html>
+
+<h1>Personal</h1>
+<hr class="thin">
