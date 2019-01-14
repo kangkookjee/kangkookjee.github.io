@@ -27,7 +27,23 @@ $(document).ready( function() {
   ga('set', 'anonymizeIp', true);
 </script>
 
+-<script type="text/javascript">
+  $(function() {
+  fill_email();
+  // show_pubs("selected")
+  // create_pubs();
+  });
 
+  function fill_email() {
+  var email = ("!@#kj" +"!@#ee"+"@!@#"+"ne!@#"+"c-la!@#b"+"s.com").replace(/!@#/g,"");
+  var forms = document.getElementsByClassName("email");
+  for (var i = 0; i < forms.length; i++) {
+  forms[i].href = "mailto:" + email;
+  forms[i].textContent = email;
+  }
+  }
+  fill_email()
+</script>
 
 </head>
 
@@ -66,8 +82,9 @@ $(document).ready( function() {
   </p>
 </div> <!--itemscope-->
 <p>    
-   4 Independence Way, Suite 200<br />
-   Princeton, NJ 08540
+  kjee (_at_) nec-labs (_dot_) com <br /> 
+  4 Independence Way, Suite 200<br />
+  Princeton, NJ 08540
 </p>
 <h1>About</h1>
 <hr class="thin">
