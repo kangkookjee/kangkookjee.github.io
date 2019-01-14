@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,50 +20,37 @@ $(document).ready( function() {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-3343808-2', 'auto');
   ga('send', 'pageview');
   ga('set', 'anonymizeIp', true);
 </script>
 
-<script type="text/javascript">
-  $(function() {
-  fill_email();
-  // show_pubs("selected")
-  // create_pubs();
-  });
-  
-  function fill_email() {
-  var email = ("!@#kj" +"!@#ee"+"@!@#"+"ne!@#"+"c-la!@#b"+"s.com").replace(/!@#/g,"");
-  var forms = document.getElementsByClassName("email");
-  for (var i = 0; i < forms.length; i++) {
-  forms[i].href = "mailto:" + email;
-  forms[i].textContent = email;
-  }
-  }
-  fill_email()
-</script>
+
+
 </head>
 
 <body onload="setTimeout(function() { window.scrollTo(0, 1) }, 100);">
 <div id="container">
 
   <!-- Menu -->
+
   <div id="header" >
     <div id="topbar"></div>
     <div itemscope itemtype="http://schema.org/Person">
       <p id="title"><span itemprop="name">Kangkook Jee</span></p>
     </div>
     <ul id="nav">
-      <li><a href="#" id="section sAbout">About</a></li>
-      <li><a href="#" id="section sPublications">Publications</a></li>
-      <li><a href="docs/kangkookjee_cv.pdf">Resume</a></li>
+      <li><a href="#" id="sAbout">About</a></li>
+      <li><a href="#" id="sPublications">Publications</a></li>
+      <li><a href="mikepo_cv.pdf">Resume</a></li>
     </ul>
     <hr class="thin">
   </div> <!-- header -->
   
   <!-- About -->
+	
   <div class="section sAbout">
 	<div class="inner">
 		
@@ -74,20 +60,15 @@ $(document).ready( function() {
   </div>
 
   <p>
-    <span itemprop="jobTitle">Kangkook Jee</span><br />
-    <p>[ <a class="email">email</a> ] <!-- <span class="text-muted">(updated in Feb. 2016)</span>--> [ <a href="https://scholar.google.com/citations?user=x-ApqMUAAAAJ&hl=en">Google Scholar</a> ] [ <a href="https://github.com/jikk/">GitHub</a> ]<!-- [ <a href="https://www.linkedin.com/in/chunghwankim">LinkedIn</a> ]--> [ <a href="https://www.dropbox.com/s/sdv2ixu8oavnhjj/id_rsa.pub?dl=1">public key</a> ]<!-- [ <a href="https://www.purdue.edu/registrar/documents/calendars/academicCalendars/academicCal_16-17.pdf">Purdue Calendar</a> ]--></p>
-
-  <br/>
-    <!--<a class="email">email</a></p><br/>-->
+    <span itemprop="jobTitle">Researcher</span><br />
     <a href="http://www.nec-labs.com/research-departments/computer-security/computer-security-home">Computer Security Department</a><br />
     <a href="http://www.nec-labs.com/" itemprop="affiliation">NEC Laboratories America</a>
   </p>
 </div> <!--itemscope-->
-  <p>    <script type="text/javascript">fill_email()</script>
-    4 Independence Way, Suite 200<br />
-    Princeton, NJ 08540 
-  </p>
-
+<p>    
+   4 Independence Way, Suite 200<br />
+   Princeton, NJ 08540
+</p>
 <h1>About</h1>
 <hr class="thin">
 
